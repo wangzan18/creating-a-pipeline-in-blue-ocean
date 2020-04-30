@@ -13,5 +13,17 @@ pipeline {
       }
     }
 
+    stage('test') {
+      agent {
+        docker {
+          image 'nginx'
+        }
+
+      }
+      steps {
+        sleep 60
+      }
+    }
+
   }
 }
